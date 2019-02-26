@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     tools:context=".MainActivity"
 
     >
@@ -24,39 +23,59 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="First number"
+        android:layout_marginTop="32dp"
         android:inputType="numberSigned|number|numberDecimal"
         android:singleLine="true" />
 
     <EditText
         android:id="@+id/editText2"
+        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberSigned|number|numberDecimal" />
+        android:hint="Second number"
+        android:inputType="numberSigned|number|numberDecimal"
+        android:singleLine="true" />
 
-    <Button
-        android:id="@+id/adder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:onClick="solution"
-        android:text="Add"
-        android:textColor="#fff" />
+ <LinearLayout
 
-    <Button
-        android:id="@+id/subtract"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:onClick="solution"
-        android:text="Subtract"
-        />
+     android:layout_marginTop="16dp"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+     android:orientation="horizontal"
+
+     <Button
+         android:id="@+id/adder"
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:layout_height="wrap_content"
+         android:backgroundTint="@color/colorPrimary"
+         android:onClick="solution"
+         android:text="Add"
+         android:textColor="#fff" />
+
+     <Button
+         android:id="@+id/subtract"
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:layout_height="wrap_content"
+         android:backgroundTint="@color/colorAccent"
+         android:onClick="solution"
+         android:text="Subtract"
+         />
+
+
+ </LinearLayout>
 
     <TextView
         android:id="@+id/answer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Answer"
-        android:textSize="30sp" />
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+
+        android:textSize="40dp" />
 
 </LinearLayout>
